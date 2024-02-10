@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Assignment02</title>
+</head>
+<body>
+    <header>
+        <h1>My Cart</h1>
+    </header>
+    <div class="item">
+        <div class="item1" id="item1">
+           <img src="black.jpeg" alt="black"/>
+           <p>Black perfume</p>
+           <p>$200</p>
+        </div>
+
+        <div class="item2" id="item2">
+            <img src="si1.jpg" alt="si"/>
+            <p>Si perfume</p>
+            <p>$150<p>
+        </div>
+
+        <div class="item3" id="item3">
+            <img src="versa.jpeg" alt="versa"/>
+            <p>Versa perfume</p>
+            <p>$180</p>
+        </div>
+    </div>
+    
+    <div class="total">
+      <p><strong>Cart Subtotal: </strong>$<span id="total">0</span></p> 
+    </div>
+
+    <footer>
+        Created by Fatema Tawakoli
+    </footer>
+
+    <script>
+        //when user click on a item showws the total price
+        document.querySelector("#item1").onclick = function() {
+        //we use let for limited variables in defined blocks
+        let total = document.querySelector("#total").textContent;
+        //we use parseInt to change the variables to an integer
+        total = parseInt(total);
+        //we use total += number to c0ooecting numbers
+        total += 200;
+        console.log(total);
+        //we textContent to change content
+        document.querySelector("#total").textContent = total;
+    }
+
+        document.querySelector("#item2").onclick = function() {
+        let total = document.querySelector("#total").textContent;
+        total = parseInt(total);
+        total += 150;
+        console.log(total);
+        document.querySelector("#total").textContent = total;
+    }
+
+        document.querySelector("#item3").onclick = function() {
+        let total = document.querySelector("#total").textContent;
+        total = parseInt(total);
+        total += 180;
+        console.log(total);
+        document.querySelector("#total").textContent = total;
+    }
+    </script>
+</body>
+</html>
